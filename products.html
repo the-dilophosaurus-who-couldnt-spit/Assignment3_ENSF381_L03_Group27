@@ -1,0 +1,107 @@
+<!--
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+Name : products.html
+Assignment : 01
+Group members : Alvin Long, Thanishque Harshaa
+UCIDs : 30184369, 30171412
+Submission : Feb 5, 2024
+File description : The product listing page
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+-->
+
+<!--
+Requirements:
+• Create a product listing page with HTML. You have to add 2 products per line.
+• Display at least four products with their associated image, name, price, and a button to add
+them to the cart. This button will not have any functionality at this moment
+-->
+
+<!--
+Place the following elements in your HTML at these specific locations and do not change the
+order:
+• <header>: This is where your website's logo and name should be placed. The logo should
+be placed at the top left and the name should be placed right after the logo.
+• <div>: The navigation links to other pages (home.html, products.html, contact.html, and
+login.html) are placed directly below the header.
+• <main>: Below the navigation bar, where the primary content, including the products,
+should be placed. Each product must be displayed with an image of the product, followed
+by the name, price, and a button to add the product to the cart. Use the heading element to
+display the name of the product.
+• <footer>: Add a footer with a copyright notice at the bottom of your page
+-->
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Logo on the top left -->
+        <img src="images/logo.jpg" alt="Your Logo" width="175" height="100">
+        
+        <!-- Website name on the right -->
+        <h1 class=company-name>One-Stop Car Shop</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <div>
+        <div class="nav-container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="product-list">
+        <!-- Product 1 -->
+        <div class="product-container">
+            <img class="product-image" src="images/techtruck.jpg" alt="Tech Truck" width="350" height="150">
+            <h2>Tech Truck</h2>
+            <p class="product-price">Price: $100 000.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-container">
+            <img class="product-image" src="images/supercar.jpg" alt="Super Car" width="350" height="125">
+            <h2>Super Car</h2>
+            <p class="product-price">Price: $300 000.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-container">
+            <img class="product-image" src="images/luxurycar.jpg" alt="Luxury Car" width="350" height="150">
+            <h2>Luxury Car</h2>
+            <p class="product-price">Price: $500 000.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-container">
+            <img class="product-image" src="images/compactcar.jpg" alt="Compact Car" width="350" height="150">
+            <h2>Compact Car</h2>
+            <p class="product-price">Price: $30 000.00</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 One-Stop Car Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

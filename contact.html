@@ -1,0 +1,102 @@
+<!--
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+Name : contact.html
+Assignment : 01
+Group members : Alvin Long, Thanishque Harshaa
+UCIDs : 30184369, 30171412
+Submission : Feb 5, 2024
+File description : The contact page
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+-->
+
+<!--
+Requirements:
+• Create a contact page with HTML.
+• Display contact information, such as email, phone number, and social media links. You do
+not need to put your personal social media profile’s link. Alternatively, you can redirect the
+user to facebook.com or instagram.com
+-->
+
+<!--
+Place the following elements in your HTML at these specific locations and do not change the
+order:
+• <header>: This is where your website's logo and name should be placed. The logo should
+be placed at the left and name should be placed right after the logo.
+• <div>: The navigation links to other pages (home.html, products.html, contact.html, and
+login.html) are placed directly below the header.
+• <main>: Below the navigation bar, where the contact information should be displayed. This
+page must contain a message to the customers, email, phone number, and at least 2 social
+media links. When the user clicks on a link, they will be redirected to the social media
+website associated with that link.
+• <footer>: Add a footer with a copyright notice at the bottom of your page.
+-->
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <!-- Logo on the left -->
+        <img src="images/logo.jpg" alt="Your Logo" width="175" height="100">
+        
+        <!-- Website name on the right -->
+        <h1 class=company-name>One-Stop Car Shop</h1>
+    </header>
+
+    <!-- Navigation Section -->
+    <div class="nav-container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </div>
+
+    <!-- Main Content Section -->
+    <main class="contact-section">
+
+        <!-- Message to customers -->
+        <div>
+            <p class = section-header>Reach Out to Us</p>
+            <p>Welcome to our contact page! Feel free to reach out to us through the links provided below.</p>
+        </div>
+        <!-- Contact Information -->
+        <!-- Email -->
+        <div class="contact-method">
+            <p class = content-header>E-mails:</p>
+            <p>Email: <a href="mailto:your@email.com">avlinlong@gmail.com</a></p>
+            <p>Email: <a href="mailto:your@email.com">thanishque.h@gmail.com</a></p>
+        </div>
+        <!-- Phone -->
+        
+        <div class="contact-method">
+            <p class = content-header>Phone Numbers:</p>
+            <p>Phone: +555-555-5555</p>
+            <p>Phone: +696-696-6969
+        </div>
+        
+        <!-- Social Media Links -->
+        <p class = content-header>Social Media:</p>
+        <p>Follow us on social media:</p>
+        <div class = social-media-link>
+            <p><a href="https://facebook.com" target="_blank">Facebook</a></p>
+            <p><a href="https://instagram.com" target="_blank">Instagram</a></p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 One-Stop Car Shop. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
