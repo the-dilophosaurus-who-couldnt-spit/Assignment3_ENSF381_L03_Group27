@@ -12,259 +12,230 @@ create an empty file
 
 /* Header */
 header {
-    background-color: #333;
-    padding: 20px;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #333;
+  padding: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Company Name */
 .company-name {
-    margin-left: 20px; /* Adjust margin as needed */
-    color: #ffffff;
+  margin-left: 20px; /* Adjust margin as needed */
+  color: #ffffff;
 }
 
 /* Navigation Bar */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
 }
 
 nav {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-    width: 100%;
-    background-color: #333;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: #333;
 }
 
 nav a {
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
 }
 
 /* index.html CSS */
 /* Main */
 main {
-    padding: 20px;
-  }
-  
-  /* About Us Section */
-  .about-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-  }
-  
-  /* Shop Now Button */
-  .shop-button {
-    background-color: #505050;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    display: block; /* Change display to block to make it a block-level element */
-    margin: 20px auto; /* Center the button horizontally and add margin for spacing */
-    width: fit-content; /* Make the button width fit its content */
-  }
-  
-  .shop-button:hover {
-    background-color: #45A049;
-  }
-  
-  
-  /* Customer Review Section */
-  .customer-reviews {
-    display: flex;
-    flex-direction: column;
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-  }
-  
-/* Login Form Section */
-.login-form {
+  padding: 20px;
+}
+
+/* About Us Section */
+.about-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: #ddd;
   padding: 20px;
   margin: 20px;
-  border-radius: 10px;
+}
+
+/* Shop Now Button */
+.shop-button {
+  background-color: #505050;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: block; /* Change display to block to make it a block-level element */
+  margin: 20px auto; /* Center the button horizontally and add margin for spacing */
+  width: fit-content; /* Make the button width fit its content */
+}
+
+.shop-button:hover {
+  background-color: #45A049;
+}
+
+
+/* Customer Review Section */
+.customer-reviews {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Login Form Section */
+.login-form {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #ddd;
+padding: 20px;
+margin: 20px;
+border-radius: 10px;
 }
 
 /* Form Fields */
 .login-form label {
-  display: block;
-  margin: 10px;
+display: block;
+margin: 10px;
 }
 
 .login-form input[type="email"],
 .login-form input[type="password"] {
-  width: calc(100% - 20px); /* Adjusting width to match the username input */
-  padding: 10px;
-  margin: 10px;
-  background-color: #fff;
-  border-radius: 5px;
+width: calc(100% - 20px); /* Adjusting width to match the username input */
+padding: 10px;
+margin: 10px;
+background-color: #fff;
+border-radius: 5px;
 }
 
 .login-form input[type="email"]::placeholder,
 .login-form input[type="password"]::placeholder {
-  color: #999;
+color: #999;
 }
 
 /* Login Button */
 .login-form button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  opacity: 0.5;
-  cursor: pointer;
+background-color: #4CAF50;
+color: white;
+padding: 10px;
+border-radius: 5px;
+margin: 10px;
+opacity: 0.5;
+cursor: pointer;
 }
 
 .login-form button:hover {
-  background-color: #45A049;
-  opacity: 1.0;
+background-color: #45A049;
+opacity: 1.0;
 }
 
 /* Signup Link */
 .signup-link {
-  color: #007BFF; /* Blue color */
-  text-decoration: none; /* Remove default underline */
-  margin: 10px; /* Margin of 10px */
+color: #007BFF; /* Blue color */
+text-decoration: none; /* Remove default underline */
+margin: 10px; /* Margin of 10px */
 }
 
 .signup-link:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
 
 /* Message box container */
 .message-box {
-  display: none; /* Initially hide the message box */
-  border: 2px solid #f9f9f9;
-  background-color: #f9f9f9;
-  padding: 10px;
-  margin: 20px;
+display: none; /* Initially hide the message box */
+border: 2px solid #f9f9f9;
+background-color: #f9f9f9;
+padding: 10px;
+margin: 20px;
 }
 
 /* contact.html CSS
 
 Contact Information Section */
 .contact-section {
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  flex-direction: column;
 }
 
 /* Contact Methods */
 .contact-method {
-    background-color: #ddd;
-    padding: 0;
-    margin: 0;
-    border-radius: 10px;
+  background-color: #ddd;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
 }
 
 /* Social Media Links Hover Effect */
 .social-media-link:hover {
-    color: #007BFF;
+  color: #007BFF;
 }
 
 /* Social Media Links Hover Effect */
 .content-header {
-    font-size: 1.2em; /* Adjust the font size as needed */
-    font-weight: bold;
+  font-size: 1.2em; /* Adjust the font size as needed */
+  font-weight: bold;
 }
 
 /* Social Media Links Hover Effect */
 .section-header {
-    font-size: 2em; /* Adjust the font size as needed */
-    font-weight: bold;
+  font-size: 2em; /* Adjust the font size as needed */
+  font-weight: bold;
 }
 
 /* products.html CSS
 
 Product List Section */
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
 }
 
 /* Individual Product Styling */
 .product-container {
-    width: calc(50% - 50px); /* 50% width with margin between containers */
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: background-color 0.3s;
+  width: calc(50% - 50px); /* 50% width with margin between containers */
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
 .product-container:hover {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .product-image {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .product-price {
-    color: #007BFF;
-    font-weight: bold;
+  color: #007BFF;
+  font-weight: bold;
 }
 
 /* Add to Cart Button */
 .add-to-cart-btn {
-    background-color: #505050;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.add-to-cart-btn:hover {
-    background-color: #45A049;
-    align-items: center;
-}
-
-.cart-title {
-  font-size: 24px;
-}
-
-.cart {
-  display: flex;
-  justify-content: center; /* Center the cart horizontally */
-  background-color: #ddd;
-  color: black;
-  padding: 20px;
-  margin: 20px auto; /* Center the cart container horizontally */
-  text-align: center;
-}
-
-.remove-from-cart {
   background-color: #505050;
   color: white;
   padding: 10px;
@@ -274,12 +245,41 @@ Product List Section */
   transition: background-color 0.3s;
 }
 
-.remove-from-cart:hover {
-  background-color: #ff0000;
+.add-to-cart-btn:hover {
+  background-color: #45A049;
   align-items: center;
 }
 
-/* Signup page CSS */
+.cart-title {
+font-size: 24px;
+}
+
+.cart {
+display: flex;
+justify-content: center; /* Center the cart horizontally */
+background-color: #ddd;
+color: black;
+padding: 20px;
+margin: 20px auto; /* Center the cart container horizontally */
+text-align: center;
+}
+
+.remove-from-cart {
+background-color: #505050;
+color: white;
+padding: 10px;
+border-radius: 5px;
+margin: 10px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.remove-from-cart:hover {
+background-color: #ff0000;
+align-items: center;
+}
+
+/* Signup Form Section */
 .signup-form-section {
   display: flex;
   justify-content: center;
@@ -287,15 +287,10 @@ Product List Section */
   background-color: #ddd;
   padding: 20px;
   margin: 20px;
-}
-
-.signup-form-container {
-  background-color: #ddd;
-  padding: 20px;
-  margin: 20px;
   border-radius: 10px;
 }
 
+/* Form Fields */
 label {
   display: block;
   margin: 10px;
@@ -311,6 +306,13 @@ input[type="email"] {
   border-radius: 5px;
 }
 
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder {
+  color: #999;
+}
+
+/* Signup Button */
 #signup-button {
   background-color: #4CAF50;
   color: white;
@@ -326,27 +328,20 @@ input[type="email"] {
   opacity: 1.0;
 }
 
-#message-box-container {
-  border: 2px solid;
-  border-color: #ddd;
-  background-color: #ddd;
-  padding: 10px;
-  margin: 20px;
-}
 
 /* Media query for screen width less than 480px */
 @media (max-width: 900px) {
-    .product-container {
-        width: calc(100% - 20px); /* 100% width with margin */
-    }
+  .product-container {
+      width: calc(100% - 20px); /* 100% width with margin */
+  }
 }
 
 /* Footer */
 footer {
-    display: flex;
-    justify-content: center;
-    background-color: #333;
-    padding: 10px;
-    margin: 0;
-    color: white;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+  margin: 0;
+  color: white;
 }
