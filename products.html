@@ -67,33 +67,38 @@ display the name of the product.
         <!-- Product 1 -->
         <div class="product-container">
             <img class="product-image" src="images/techtruck.jpg" alt="Tech Truck" width="350" height="150">
-            <h2>Tech Truck</h2>
-            <p class="product-price">Price: $100 000.00</p>
+            <h2 class="product-name">Tech Truck</h2>
+            <p class="product-price">$100 000.00</p>
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
         <!-- Product 2 -->
         <div class="product-container">
             <img class="product-image" src="images/supercar.jpg" alt="Super Car" width="350" height="125">
-            <h2>Super Car</h2>
-            <p class="product-price">Price: $300 000.00</p>
+            <h2 class="product-name">Super Car</h2>
+            <p class="product-price">$300 000.00</p>
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
         <!-- Product 3 -->
         <div class="product-container">
             <img class="product-image" src="images/luxurycar.jpg" alt="Luxury Car" width="350" height="150">
-            <h2>Luxury Car</h2>
-            <p class="product-price">Price: $500 000.00</p>
+            <h2 class="product-name">Luxury Car</h2>
+            <p class="product-price">$500 000.00</p>
             <button class="add-to-cart-btn">Add to Cart</button>
         </div>
 
         <!-- Product 4 -->
         <div class="product-container">
             <img class="product-image" src="images/compactcar.jpg" alt="Compact Car" width="350" height="150">
-            <h2>Compact Car</h2>
-            <p class="product-price">Price: $30 000.00</p>
+            <h2 class="product-name">Compact Car</h2>
+            <p class="product-price">$30 000.00</p>
             <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+
+        <!-- Cart Display Section -->
+        <div class="cart" id="cart-display">
+            <div id="cart-items-container"><span class="cart-title"><b>Shopping Cart</b></span></div>
         </div>
     </main>
 
@@ -102,6 +107,68 @@ display the name of the product.
         <p>&copy; 2024 One-Stop Car Shop. All rights reserved.</p>
     </footer>
 
+    <script>
+    // Function to handle adding a product to the cart
+    function addToCart(event) {
+        const productContainer = event.target.closest('.product-container');
+        const productName = productContainer.querySelector('.product-name').innerText;
+        const productPrice = productContainer.querySelector('.product-price').innerText;
+
+        // Check if the product is already in the cart
+        const existingCartItem = document.querySelector(`#cart-display .cart-item[data-name="${productName}"]`);
+        if (existingCartItem) {
+            // If product already exists, increase quantity by 1
+            const quantityElement = existingCartItem.querySelector('.cart-quantity');
+            const quantity = parseInt(quantityElement.innerText);
+            quantityElement.innerText = quantity + 1;
+        } else {
+            // If product does not exist, create a new cart item
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.dataset.name = productName;
+            cartItem.innerHTML = `
+                <div class="cart-item-details">
+                    <span class="cart-product-name">${productName} - </span>
+                    <span class="cart-product-price">${productPrice} - </span>
+                    <span class="cart-quantity">1</span>
+                    <button class="remove-from-cart">Remove</button>
+                </div>
+            `;
+            document.getElementById('cart-items-container').appendChild(cartItem);
+        }
+
+        // Show alert confirming addition to cart
+        alert(`${productName} has been added to the cart.`);
+    }
+
+    // Add event listener to each "Add to Cart" button
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+    
+    // Function to handle removing a product from the cart
+    function removeFromCart(event) {
+        const cartItem = event.target.closest('.cart-item');
+        const quantityElement = cartItem.querySelector('.cart-quantity');
+        let quantity = parseInt(quantityElement.innerText);
+        if (quantity > 1) {
+            // If quantity is greater than 1, decrease it by 1
+            quantityElement.innerText = quantity - 1;
+        } else {
+            // If quantity is 1, remove the cart item
+            cartItem.remove();
+        }
+    }
+    
+    // Add event listener to the document body and delegate the "click" event to the "Remove" buttons
+    document.body.addEventListener('click', function(event) {
+        if (event.target.classList.contains('remove-from-cart')) {
+            removeFromCart(event);
+        }
+    });
+
+    </script>    
 </body>
 
 </html>

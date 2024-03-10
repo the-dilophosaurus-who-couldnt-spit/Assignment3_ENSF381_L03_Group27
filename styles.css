@@ -65,7 +65,7 @@ main {
   
   /* Shop Now Button */
   .shop-button {
-    background-color: #4CAF50;
+    background-color: #505050;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -123,9 +123,10 @@ main {
   
   /* Login Button */
   .login-form button {
-    background-color: #4CAF50;
+    background-color: #45A049;
     color: white;
     padding: 10px;
+    align-items: center;
     border-radius: 5px;
     margin: 10px;
     opacity: 0.5;
@@ -227,7 +228,7 @@ Product List Section */
 
 /* Add to Cart Button */
 .add-to-cart-btn {
-    background-color: #4CAF50;
+    background-color: #505050;
     color: white;
     padding: 10px;
     border-radius: 5px;
@@ -238,6 +239,36 @@ Product List Section */
 
 .add-to-cart-btn:hover {
     background-color: #45A049;
+    align-items: center;
+}
+
+.cart-title {
+  font-size: 24px;
+}
+
+.cart {
+  display: flex;
+  justify-content: center; /* Center the cart horizontally */
+  background-color: #ddd;
+  color: black;
+  padding: 20px;
+  margin: 20px auto; /* Center the cart container horizontally */
+  text-align: center;
+}
+
+.remove-from-cart {
+  background-color: #505050;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-from-cart:hover {
+  background-color: #ff0000;
+  align-items: center;
 }
 
 /* Media query for screen width less than 480px */
