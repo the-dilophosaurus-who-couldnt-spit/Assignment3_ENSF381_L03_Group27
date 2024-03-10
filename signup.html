@@ -17,7 +17,6 @@ File description : The signup page
     <title>Signup Page</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
 <body>
     <header>
         <img src="images/logo.jpg" alt="Your Logo" width="175" height="100">
@@ -40,10 +39,10 @@ File description : The signup page
         <div class="signup-form-container">
             <form id="signup-form">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+                <input type="text" id="username" name="username" placeholder="Enter your username" pattern="[a-zA-Z][a-zA-Z0-9-_]{2,19}" title="Username must start with a letter and be between 3 and 20 characters long, containing only letters, numbers, hyphens, and underscores." required><br>
 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+                <input type="password" id="password" name="password" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[\]{}|;<>/?.])[^'\x22]{8,}" title="Password must contain at least one number, one uppercase letter, one lowercase letter, one special character, and be at least 8 characters long." required><br>                
 
                 <label for="confirm-password">Confirm Password:</label>
                 <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required><br>
