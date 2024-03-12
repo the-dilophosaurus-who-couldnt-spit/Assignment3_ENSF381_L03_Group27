@@ -16,13 +16,21 @@ File description : The signup page
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* CSS for the message box */
+        .message-box {
+            border: 2px solid #f9f9f9;
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <img src="images/logo.jpg" alt="Your Logo" width="175" height="100">
         <h1 class="company-name">One-Stop Car Shop</h1>
     </header>
-    <!-- Navigation Section -->
     <div>
         <div class="nav-container">
             <nav>
@@ -34,37 +42,109 @@ File description : The signup page
         </div>
     </div>
 
-    <!-- Main Content Section -->
-    <main class="signup-form-section">
-        <div class="signup-form-container">
-            <form id="signup-form">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" pattern="[a-zA-Z][a-zA-Z0-9-_]{2,19}" title="Username must start with a letter and be between 3 and 20 characters long, containing only letters, numbers, hyphens, and underscores." required><br>
+    <main>
+        <section class="signup-form">
+            <form name="signupForm" id="signupForm">
+                <div class="form-group">
+                    <label for="Uname">Username:</label>
+                    <input type="text" id="Uname" name="username" placeholder="Username" required>
+                </div>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[\]{}|;<>/?.])[^'\x22]{8,}" title="Password must contain at least one number, one uppercase letter, one lowercase letter, one special character, and be at least 8 characters long." required><br>                
+                <div class="form-group">
+                    <label for="pass">Password:</label>
+                    <input type="password" id="pass" name="password" placeholder="Password" required>
+                </div>
 
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required><br>
+                <div class="form-group">
+                    <label for="confirmPass">Confirm Password:</label>
+                    <input type="password" id="confirmPass" name="confirmPassword" placeholder="Reenter Password" required>
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+                <div class="form-group">
+                    <label for="Email">Email:</label>
+                    <input type="email" id="Email" name="email" placeholder="Email" required>
+                </div>
 
-                <button type="submit" id="signup-button">Signup</button>
+                <div class="form-group">
+                    <button type="submit">Sign Up</button>
+                </div>
             </form>
-        </div>
+        </section>
 
-        <!-- Message Box Container -->
-        <div id="message-box-container">
-            <p id="message"></p>
+        <div id="messageBox" class="message-box" style="display: none;">
+            <p id="messageText"></p>
         </div>
     </main>
 
-    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 One-Stop Car Shop. All rights reserved.</p>
     </footer>
 
-    <script src="signup.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('signupForm');
+            const messageBox = document.getElementById('messageBox');
+            const messageText = document.getElementById('messageText');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent the form from submitting by default
+                validateForm();
+            });
+
+            function validateForm() {
+                const username = form.elements['username'].value;
+                const password = form.elements['password'].value;
+                const confirmPassword = form.elements['confirmPassword'].value;
+                const email = form.elements['email'].value;
+
+                // Validate username
+                if (!isValidUsername(username)) {
+                    showMessage('Invalid username. Must be between 3 and 20 characters long, start with a letter, and contain only alphanumeric characters, hyphens, and underscores.');
+                    return;
+                }
+
+                // Validate password
+                if (!isValidPassword(password)) {
+                    showMessage('Invalid password. Must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+                    return;
+                }
+
+                // Validate confirm password
+                if (confirmPassword !== password) {
+                    showMessage('Passwords do not match.');
+                    return;
+                }
+
+                // Validate email
+                if (!isValidEmail(email)) {
+                    showMessage('Invalid email address.');
+                    return;
+                }
+
+                // If all validations pass, show success message
+                showMessage('Signup successful!', true);
+            }
+
+            function isValidUsername(username) {
+                const usernamePattern = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
+                return usernamePattern.test(username);
+            }
+
+            function isValidPassword(password) {
+                const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~]).{8,}$/;
+                return passwordPattern.test(password);
+            }
+
+            function isValidEmail(email) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailPattern.test(email);
+            }
+
+            function showMessage(message, isSuccess = false) {
+                messageText.innerText = message;
+                messageBox.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
