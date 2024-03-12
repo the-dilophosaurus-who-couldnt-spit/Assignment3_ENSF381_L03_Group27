@@ -279,6 +279,7 @@ background-color: #ff0000;
 align-items: center;
 }
 
+/*Signup sheet CSS*/
 .signup-background {
     display: flex;
     justify-content: center;
@@ -294,6 +295,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ddd;
 }
 
 #signupForm div {
@@ -332,9 +334,8 @@ align-items: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid black; /* Changed from #f9f9f9 to black */
     background-color: #f9f9f9;
-    padding: 10px;
+    padding: 20px;
     margin: 20px auto; /* Center the message box horizontally */
     width: 97%; /* Make the box longer by controlling its width */
     display: none; /* Initially hide the message box */

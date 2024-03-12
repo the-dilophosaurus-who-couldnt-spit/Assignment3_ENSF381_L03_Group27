@@ -97,32 +97,35 @@ File description : The signup page
                 const confirmPassword = form.elements['confirmPassword'].value;
                 const email = form.elements['email'].value;
 
+                // Array to hold error messages
+                const errorMessages = [];
+
                 // Validate username
                 if (!isValidUsername(username)) {
-                    showMessage('Invalid username. Must be between 3 and 20 characters long, start with a letter, and contain only alphanumeric characters, hyphens, and underscores.');
-                    return;
+                    errorMessages.push('Invalid username. Must be between 3 and 20 characters long, start with a letter, and contain only alphanumeric characters, hyphens, and underscores.');
                 }
 
                 // Validate password
                 if (!isValidPassword(password)) {
-                    showMessage('Invalid password. Must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
-                    return;
+                    errorMessages.push('Invalid password. Must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
                 }
 
                 // Validate confirm password
                 if (confirmPassword !== password) {
-                    showMessage('Passwords do not match.');
-                    return;
+                    errorMessages.push('Passwords do not match.');
                 }
 
                 // Validate email
                 if (!isValidEmail(email)) {
-                    showMessage('Invalid email address.');
-                    return;
+                    errorMessages.push('Invalid email address.');
                 }
 
-                // If all validations pass, show success message
-                showMessage('Signup successful!', true);
+                // If there are any error messages, display them; otherwise, show success message
+                if (errorMessages.length > 0) {
+                    showMessage(errorMessages.join('\n'));
+                } else {
+                    showMessage('Signup successful!', true);
+                }
             }
 
             function isValidUsername(username) {
